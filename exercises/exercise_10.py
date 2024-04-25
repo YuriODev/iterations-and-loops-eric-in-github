@@ -1,10 +1,16 @@
-# Prompt the user to enter the number of pounds.
-pounds = int(input())
 
-# Initialize the kilograms variable.
-kilograms = 0
+# Define the conversion function
+def pounds_to_kilograms(pounds):
+    return pounds * 0.453592
 
-# Loop through the range of pounds and print the equivalent kilograms.
-for i in range(1, pounds + 1):
-    kilograms += 0.45
-    print(f"{i} {kilograms:.2f}")
+# Create a list of pounds values
+pounds_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+print("Pounds", "Kilograms")
+
+for pounds in pounds_list:
+    
+    kilograms = pounds_to_kilograms(pounds)
+
+    print(pounds, kilograms)
